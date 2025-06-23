@@ -32,11 +32,8 @@ const Footer = () => {
   ];
 
   const resources = [
-    
     { name: "Blog", href: "/blog" }, 
-   
     { name: "Support", href: "/support" },
-    
   ];
 
   const legal = [
@@ -56,7 +53,6 @@ const Footer = () => {
   const socialLinks = [
     { name: "Twitter", href: "#", icon: Twitter },
     { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "GitHub", href: "#", icon: Github },
     { name: "Instagram", href: "#", icon: Instagram }
   ];
 
@@ -69,11 +65,9 @@ const Footer = () => {
       <div className="absolute inset-0 bg-grid-slate-100/[0.02] bg-[length:32px_32px]"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-            
             {/* Company Branding Section */}
             <div className="lg:col-span-2">
               {/* Logo */}
@@ -97,8 +91,6 @@ const Footer = () => {
                 <p className="text-slate-300 text-base leading-relaxed mb-6">
                   Transforming ideas into powerful digital solutions. We build next-generation software that drives innovation and growth for businesses worldwide.
                 </p>
-                
-               
               </div>
 
               {/* Contact Information */}
@@ -124,7 +116,7 @@ const Footer = () => {
                       href="tel:+916397036898" 
                       className="hover:text-green-400 cursor-pointer transition-all duration-200"
                     >
-                       +91 (639) 703-6898
+                      +91 (639) 703-6898
                     </a>
                   </div>
                 </div>
@@ -142,7 +134,6 @@ const Footer = () => {
 
             {/* Navigation Links */}
             <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              
               {/* Solutions */}
               <div>
                 <h3 className="text-white font-semibold text-lg mb-6 flex items-center">
@@ -237,7 +228,7 @@ const Footer = () => {
                         <a
                           key={social.name}
                           href={social.href}
-                          className="w-10 h-10 rounded-lg  flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600/20 transition-all duration-200 group"
+                          className="w-10 h-10 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600/20 transition-all duration-200 group"
                         >
                           <IconComponent className="w-5 h-5 group-hover:scale-110 transition-transform" />
                         </a>
@@ -250,61 +241,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar (Updated) */}
         <div className="border-t border-slate-800/50 py-8">
-          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
-            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-slate-400">
-              <p className="text-sm">© 2024 Zentrix Infotech. All rights reserved.</p>
-              <div className="flex items-center space-x-4 text-xs">
-                <span className="flex items-center px-3 py-1 bg-green-500/10 rounded-full border border-green-500/20">
-                  <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-                  All systems operational
-                </span>
-                
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-4 text-slate-400">
-              <div className="flex items-center space-x-2 text-sm">
-                <span>Built with</span>
-                <div className="w-5 h-5 text-red-500 animate-pulse">❤️</div>
-                <span>in India</span>
-                <div className="flex items-center space-x-1 ml-2">
-                  <div className="w-6 h-4 bg-gradient-to-r from-orange-500 via-white to-green-500 rounded-sm shadow-sm"></div>
-                </div>
-              </div>
-              <div className="h-4 w-px bg-slate-700"></div>
-              <div className="text-xs text-slate-500">
-                v2.1.0
-              </div>
-            </div>
+          <div className="flex justify-center items-center text-slate-400 text-sm">
+            © 2024 Zentrix Infotech. All rights reserved.
           </div>
         </div>
       </div>
-
-      <style>
-        {`
-          .bg-grid-slate-100 {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='m0 .5h32m-32 32v-32'/%3e%3c/svg%3e");
-          }
-          
-          @keyframes gradient-shift {
-            0%, 100% { 
-              background-position: 0% 50%; 
-              transform: scale(1);
-            }
-            50% { 
-              background-position: 100% 50%; 
-              transform: scale(1.05);
-            }
-          }
-          
-          .animate-gradient {
-            background-size: 200% 200%;
-            animation: gradient-shift 8s ease-in-out infinite;
-          }
-        `}
-      </style>
     </footer>
   );
 };
