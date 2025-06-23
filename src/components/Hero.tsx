@@ -177,7 +177,7 @@ const Hero = () => {
                 
                 <Sparkles className="w-4 h-4 mr-2 animate-spin" />
                 
-                <span className="relative z-10 font-semibold">Zentrix Infotech</span>
+                <span className="relative z-10 font-semibold">Zentrix_Infotech</span>
                 <div className="ml-2 px-2 py-1 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-full text-xs flex items-center gap-1">
   <span className="h-2 w-2 bg-red-500 rounded-full animate-pulse"></span>
   Live
