@@ -66,13 +66,13 @@ const Navbar = () => {
           ? 'bg-gradient-to-b from-slate-900 to-slate-950 backdrop-blur-xl shadow-lg border-b border-zinc-800/50' 
           : 'bg-gradient-to-b from-slate-900 to-slate-950 backdrop-blur-sm border-b border-zinc-800/30'
       }`}>
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4 relative">
           {/* Advanced Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800/20 via-slate-900 to-slate-950"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute inset-0 bg-grid-slate-100/[0.02] bg-[length:32px_32px]"></div>
-          <div className="flex items-center justify-between h-16">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800/20 via-slate-900 to-slate-950"></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse"></div>
+          
+          <div className="flex items-center justify-between h-16 relative z-10">
             
             {/* Logo - Compact Size for Integration */}
             <a href="/" className="flex items-center space-x-2 group flex-shrink-0">
@@ -204,10 +204,7 @@ const Navbar = () => {
                 {activeDropdown === 'resources' && (
                   <div className="absolute top-full right-0 mt-3 w-48 bg-zinc-900/95 backdrop-blur-xl border border-zinc-800/50 rounded-xl shadow-2xl py-2 animate-fade-in">
                     <div className="px-2 space-y-1">
-                      
-                     
                       <a href="/blog" className="block px-4 py-2.5 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all duration-200">Blog</a>
-                      
                       <a href="/support" className="block px-4 py-2.5 text-sm text-zinc-300 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-all duration-200">Support</a>
                     </div>
                   </div>
@@ -228,11 +225,12 @@ const Navbar = () => {
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
+            {/* Mobile Menu Button - Fixed visibility */}
+            <div className="lg:hidden flex items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-zinc-300 hover:text-white hover:bg-zinc-800/50 p-2 rounded-lg transition-all duration-200"
+                className="relative z-20 text-zinc-300 hover:text-white hover:bg-zinc-800/50 p-2 rounded-lg transition-all duration-200 border border-zinc-700/50"
+                aria-label="Toggle mobile menu"
               >
                 {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -362,11 +360,9 @@ const Navbar = () => {
                 
                 {mobileResourcesOpen && (
                   <div className="pl-8 space-y-1 animate-fade-in">
-                    
                     <a href="/blog" onClick={closeMobileMenu} className="block px-4 py-3 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800/30 rounded-lg transition-all duration-200">
                       Blog
                     </a>
-                    
                     <a href="/support" onClick={closeMobileMenu} className="block px-4 py-3 text-sm text-zinc-400 hover:text-white hover:bg-zinc-800/30 rounded-lg transition-all duration-200">
                       Support
                     </a>
@@ -390,8 +386,6 @@ const Navbar = () => {
           </div>
         )}
       </nav>
-
-      
 
       <style>
         {`
